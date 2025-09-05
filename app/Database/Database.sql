@@ -1,3 +1,4 @@
+-- Active: 1755358617783@@127.0.0.1@3306@biblioteca
 CREATE DATABASE biblioteca;
 USE biblioteca;
 
@@ -10,7 +11,7 @@ CREATE TABLE libros(
 INSERT INTO libros (nombre, imagen) VALUES
 	('Conociendo el Perú', 'libro1.jpg'),
 	('Matemáticas avanzadas', 'libro2.jpg');
-
+DROP TABLE personas;
 CREATE TABLE personas (
 	idpersona		INT AUTO_INCREMENT PRIMARY KEY,
     dni				CHAR(8) NOT NULL,
@@ -22,6 +23,11 @@ CREATE TABLE personas (
     CONSTRAINT uk_dni UNIQUE (dni),
     CONSTRAINT fk_iddistrito FOREIGN KEY (iddistrito) REFERENCES distritos (iddistrito)
 )ENGINE = INNODB;
+
+INSERT INTO personas (dni, apellidos, nombres, telefono, iddistrito, direccion)
+VALUES 
+('73214567', 'Ramírez Quispe', 'María Fernanda', '987654321', 1, 'Av. Los Próceres 123'),
+('85643219', 'Gonzales Huamán', 'Luis Alberto', '912345678', 2, 'Jr. Las Flores 456');
 
 /* Tabla categoria */
 CREATE TABLE categoria(

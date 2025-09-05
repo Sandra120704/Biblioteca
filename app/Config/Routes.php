@@ -33,3 +33,8 @@ $routes->get('api/ubigeo/distritos/(:num)', 'DistritoController::getDistritosByP
 
 $routes->get('personas/eliminar/(:num)','PersonaController::eliminar/$1');
 
+$routes->get('recursos', 'RecursosController::index');  
+$routes->get('recursos/crear', 'RecursosController::crear');
+$routes->post('recursos/store', 'RecursosController::store'); 
+
+

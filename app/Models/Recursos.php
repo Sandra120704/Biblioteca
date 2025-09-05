@@ -4,7 +4,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class Recursos extends Model{
-    protected $table = 'recusos';
+    protected $table = 'recursos';
     protected $primaryKey = 'idrecursos';
     protected $allowedFields = [
         'idsubcategoria',
