@@ -29,12 +29,15 @@ CREATE TABLE categoria(
     categoria   VARCHAR(50) NOT NULL UNIQUE
 )ENGINE = INNODB;
 
+DROP TABLE subCategoria;
 /* Tabla subcategoria */
 CREATE TABLE subCategoria(
     idsubcategoria INT AUTO_INCREMENT PRIMARY KEY, 
-    subcategoria   VARCHAR(50) NOT NULL UNIQUE,
-    idcategoria    INT NOT NULL
+    subcategoria   VARCHAR(50) NOT NULL,
+    idcategoria    INT NOT NULL,
+    CONSTRAINT fk_idcategoria FOREIGN KEY (idcategoria) REFERENCES categoria(idcategoria)
 )ENGINE = INNODB;
+
 
 /* Tabla editoriales */
 CREATE TABLE editoriales(
@@ -42,6 +45,7 @@ CREATE TABLE editoriales(
     editorial     VARCHAR(80) NOT NULL UNIQUE,
     nacionalidad  VARCHAR(100) NOT NULL
 )ENGINE = INNODB;
+
 
 INSERT INTO categoria (categoria) VALUES
     ('Matematicas'),
@@ -56,4 +60,25 @@ INSERT INTO subCategoria (subcategoria,idcategoria) VALUES
     ('Dimensiones',1),
     ('Topologia',1),
     ('Fisica Matematica',1),
-    ('Aritmetica',1);
+    ('Aritmetica',1),
+    ('Razonamiento Verbal',2),
+    ('Composicion',2),
+    ('Redaccion',2),
+    ('tipografia',2),
+    ('Linguistica',2),
+    ('Analisis de Textos',2),
+    ('Oratoria',2),
+    ('Produccion de textos',2),
+    ('Desarrollo Web',3),
+    ('Desarrollo de Video Juegos',3),
+    ('Inteligencia Artificial',3),
+    ('Administracion de base De Datos',3),
+    ('Desarrollo de Aplicaciones',3),
+    ('Diseño Grafico',3);
+
+
+
+INSERT INTO editoriales (editorial, nacionalidad) VALUES
+    ('Planeta', 'España'),
+    ('Santillana', 'Perú'),
+    ('Norma', 'Colombia');
