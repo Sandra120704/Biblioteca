@@ -32,3 +32,4 @@ $routes->get('api/ubigeo/provincias/(:num)', 'ProvinciaController::getProvincias
 $routes->get('api/ubigeo/distritos/(:num)', 'DistritoController::getDistritosByProvincia/$1');
 
 $routes->get('personas/eliminar/(:num)','PersonaController::eliminar/$1');
+
