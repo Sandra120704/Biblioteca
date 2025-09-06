@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Models\Categoria;
 use App\Models\Recursos;
 use App\Models\Editoriales;
-use App\Models\Subcategoria;
+use App\Models\SubcategoriaModel;
 
 class RecursosController extends BaseController
 {
@@ -58,7 +58,7 @@ class RecursosController extends BaseController
     public function store()
     {
         $data = [
-            'idsubcategoria' => $this->request->getPost('idsubcategoria'),
+            'idsubcategoria' => $this->request->getPost('idsubcategoria'), // ahora sí recibe valor
             'ideditorial'    => $this->request->getPost('ideditorial'),
             'tipo'           => $this->request->getPost('tipo'),
             'titulo'         => $this->request->getPost('titulo'),

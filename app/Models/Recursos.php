@@ -20,4 +20,7 @@ class Recursos extends Model{
         'creado',
         'modificado'
     ];
+    protected $useTimestamps = true;
+    protected $createdField  = 'creado';
+    protected $updatedField  = 'modificado';
 }
