@@ -1,5 +1,5 @@
-#TAREA 04 – Biblioteca
-##Descripción de la tarea
+ # TAREA 04 – Biblioteca
+ Descripción de la tarea
 
  * Esta tarea consiste en construir la base de datos y vistas para la gestión de recursos de biblioteca, siguiendo los requerimientos del curso Seminario de Complementación Práctica III del SENATI.
 
