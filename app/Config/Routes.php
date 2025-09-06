@@ -32,3 +32,13 @@ $routes->get('api/ubigeo/provincias/(:num)', 'ProvinciaController::getProvincias
 $routes->get('api/ubigeo/distritos/(:num)', 'DistritoController::getDistritosByProvincia/$1');
 
 $routes->get('personas/eliminar/(:num)','PersonaController::eliminar/$1');
+
+$routes->get('recursos/editar/(:num)', 'RecursosController::editar/$1');
+$routes->get('recursos/eliminar/(:num)', 'RecursosController::eliminar/$1');
+$routes->get('recursos', 'RecursosController::index');  
+$routes->get('recursos/crear', 'RecursosController::crear');
+$routes->post('recursos/store', 'RecursosController::store');
+$routes->get('api/subcategoria/(:num)', 'Subcategoria::getSubcategoriaByCategoria/$1');
+
+
+
